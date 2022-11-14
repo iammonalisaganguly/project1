@@ -6,12 +6,12 @@ const app = express();
 
 app.use (bodyParser.json());
 
-// let url = "" ;
+let url = "" ;
 let port = process.env.PORT || 3000;
 
-// mongoose.connect(url,{userNewUrlParser: true})
-//  .then(()=> console.log("MongoDb is connected"))
-//  .catch((err) => console.log(err));
+mongoose.connect(url,{userNewUrlParser: true})
+ .then(()=> console.log("MongoDb is connected"))
+ .catch((err) => console.log(err));
 
  app.use("/",route);
 
